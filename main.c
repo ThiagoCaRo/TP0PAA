@@ -12,16 +12,21 @@ void menu(){
 
 int main(){
     int op, quantidade;
+    Moldes moldes;
     char quadro[20][80];
+
+    iniciaMoldes(&moldes);
     iniciaMoldura(quadro);
     menu();
     printf("Digite o numero da opcao desejada: ");
     scanf("%d", &op);
     printf("\n");
     printf("Digite a quantidade de figuras a serem geradas (menor ou igual a 0 para aleatorio): ");
+    //maximo 1404 para asterisco simples
     scanf("%d", &quantidade);
     switch(op){
         case 1:
+            preencheSimples(quadro, quantidade, moldes);
             break;
         case 2:
             break;
@@ -32,5 +37,14 @@ int main(){
         case 5:
             break;
     }
+
+    printf("\n\n\n\n\n");
+    for(int i=0; i<20; i++){
+        printf("\n");
+        for(int j=0;j<80;j++){
+            printf("%c",quadro[i][j]);
+        }
+    }
+    printf("\n\n\n\n\n");
     return 0;
 }
