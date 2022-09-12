@@ -29,8 +29,10 @@ int main(){
             preencheSimples(quadro, quantidade, moldes);
             break;
         case 2:
+            preencheCruz(quadro, quantidade, moldes);
             break;
         case 3:
+            preencheXis(quadro, quantidade, moldes);
             break;
         case 4:
             break;

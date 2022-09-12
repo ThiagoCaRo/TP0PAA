@@ -33,8 +33,6 @@ void iniciaMoldes(Moldes *moldes){
 }
 
 
-
-
 void iniciaMoldura(char matriz[20][80]){
 
     for(int i=0; i<20; i++){
@@ -64,6 +62,8 @@ void iniciaMoldura(char matriz[20][80]){
 
 }
 
+
+
 void preencheSimples(char matriz[20][80], int quantidade, Moldes moldes){
     int linha, coluna;
     for(int i=0; i<quantidade; i++){
@@ -77,5 +77,37 @@ void preencheSimples(char matriz[20][80], int quantidade, Moldes moldes){
 
         matriz[linha][coluna] = moldes.asterisco;
 
+    }
+}
+
+void preencheCruz(char matriz[20][80], int quantidade, Moldes moldes){
+    int linha, coluna;
+    for(int i=0; i<quantidade; i++){
+        linha = (rand() % 18) + 1;
+        coluna = (rand() % 78) + 1;
+
+        while(verificaMolde(matriz, linha, coluna, moldes.cruz) != true){
+            linha = (rand() % 18) + 1;
+            coluna = (rand() % 78) + 1;
+        }
+
+        preencheMolde(matriz, linha, coluna, moldes.cruz);
+        
+    }
+}
+
+void preencheXis(char matriz[20][80], int quantidade, Moldes moldes){
+    int linha, coluna;
+    for(int i=0; i<quantidade; i++){
+        linha = (rand() % 18) + 1;
+        coluna = (rand() % 78) + 1;
+
+        while(verificaMolde(matriz, linha, coluna, moldes.xis) != true){
+            linha = (rand() % 18) + 1;
+            coluna = (rand() % 78) + 1;
+        }
+
+        preencheMolde(matriz, linha, coluna, moldes.xis);
+        
     }
 }
