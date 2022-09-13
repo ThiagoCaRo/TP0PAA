@@ -111,3 +111,50 @@ void preencheXis(char matriz[20][80], int quantidade, Moldes moldes){
         
     }
 }
+
+void preencheAleatorio(char matriz[20][80], int quantidade, Moldes moldes){
+    int linha, coluna, figura;
+    for(int i=0; i<quantidade; i++){
+        linha = (rand() % 18) + 1;
+        coluna = (rand() % 78) + 1;
+        figura = (rand() % 3) +1;
+        
+        switch (figura){
+            case 1:
+                while(matriz[linha][coluna] != ' '){
+                    linha = (rand() % 18) + 1;
+                    coluna = (rand() % 78) + 1;
+                }
+
+                matriz[linha][coluna] = moldes.asterisco;
+                break;
+            
+            case 2:
+                while(verificaMolde(matriz, linha, coluna, moldes.cruz) != true){
+                    linha = (rand() % 18) + 1;
+                    coluna = (rand() % 78) + 1;
+                }
+
+                preencheMolde(matriz, linha, coluna, moldes.cruz);
+                break;
+            
+            case 3:
+                while(verificaMolde(matriz, linha, coluna, moldes.xis) != true){
+                    linha = (rand() % 18) + 1;
+                    coluna = (rand() % 78) + 1;
+                }
+
+                preencheMolde(matriz, linha, coluna, moldes.xis);
+                break;
+        }
+        
+    }
+}
+
+void criaArte(char matriz[20][80], int quantidade, int quantidade_artes, Arte *arte){
+    int linha, coluna, figura;
+
+    criaMolde(arte, quantidade_artes);
+    
+
+}

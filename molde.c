@@ -318,3 +318,14 @@ void preencheMolde(char matriz[20][80], int linha, int coluna, char molde[3][3])
 
     }
 }
+
+void criaMolde(Arte *arte, int quantidade_artes){
+
+    for(int quantidade = 0; quantidade < quantidade_artes; quantidade++){
+        printf("Quais elementos do frame abaixo deseja preencher?\n");
+        printf("  1  2  3\n");
+        printf("  -------\n");
+        printf("1 |º º º|\n2 |º º º|\n3 |º º º|\n");
+        printf("  -------\n");
+    }
+}

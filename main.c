@@ -11,10 +11,11 @@ void menu(){
 
 
 int main(){
-    int op, quantidade;
+    int op, quantidade, quantidade_artes;
     Moldes moldes;
     char quadro[20][80];
 
+    srand(time(NULL));
     iniciaMoldes(&moldes);
     iniciaMoldura(quadro);
     menu();
@@ -24,6 +25,10 @@ int main(){
     printf("Digite a quantidade de figuras a serem geradas (menor ou igual a 0 para aleatorio): ");
     //maximo 1404 para asterisco simples
     scanf("%d", &quantidade);
+    if(quantidade <= 0){
+        quantidade = (rand() % 100) + 1;
+    }
+    printf("%d ", quantidade);
     switch(op){
         case 1:
             preencheSimples(quadro, quantidade, moldes);
@@ -35,8 +40,14 @@ int main(){
             preencheXis(quadro, quantidade, moldes);
             break;
         case 4:
+            preencheAleatorio(quadro, quantidade, moldes);
             break;
         case 5:
+            printf("Quantas artes/figuras deseja criar para o quadro?\n");
+            scanf("%d", &quantidade_artes);
+            Arte arte[quantidade_artes];
+
+            criaArte(quadro, quantidade, quantidade_artes, &arte[0]);
             break;
     }
 
