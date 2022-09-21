@@ -17,4 +17,4 @@ typedef struct{
 void iniciaMoldes(Moldes *moldes);
 bool verificaMolde(char matriz[20][80], int linha, int coluna, char molde[3][3]);
 void preencheMolde(char matriz[20][80], int linha, int coluna, char molde[3][3]);
-void preencheArte(char *matriz[20][40]);
+void preencheArte(char *matriz[20][20]);

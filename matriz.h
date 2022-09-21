@@ -1,7 +1,7 @@
 # include "molde.h"
 
 
-void iniciaMolduraArte(char *matriz[20][40]);
+void iniciaMolduraArte(char *matriz[20][20]);
 void iniciaMoldura(char matriz[20][80]);
 void preencheSimples(char matriz[20][80], int quantidade, Moldes moldes);
 void preencheCruz(char matriz[20][80], int quantidade, Moldes moldes);

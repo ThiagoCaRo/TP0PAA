@@ -15,7 +15,7 @@ int main(){
     int op, quantidade, quantidade_artes;
     Moldes moldes;
     char quadro[20][80];
-    char *quadroArte[20][40];
+    char *quadroArte[20][20];
     srand(time(NULL));
     iniciaMoldes(&moldes);
     
@@ -58,7 +58,7 @@ int main(){
         if(op==5){
             for(int i=0; i<20; i++){
                 printf("\n");
-                for(int j=0;j<40;j++){
+                for(int j=0;j<20;j++){
                     printf("%s",quadroArte[i][j]);
 
                 }

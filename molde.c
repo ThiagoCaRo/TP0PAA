@@ -351,12 +351,12 @@ void preencheMolde(char matriz[20][80], int linha, int coluna, char molde[3][3])
     }
 }
 
-void preencheArte(char *matriz[20][40]){
+void preencheArte(char *matriz[20][20]){
     int random;
     int count = 0;
     for(int i=1; i<19; i++){
-        for(int j=1; j<39; j++){
-            if(j<40-i){
+        for(int j=1; j<19; j++){
+            if(j<20-i){
                 
                 switch(i){
                     case 1:           

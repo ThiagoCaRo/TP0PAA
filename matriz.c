@@ -1,13 +1,13 @@
 #include "matriz.h"
 
 
-void iniciaMolduraArte(char *matriz[20][40]){
+void iniciaMolduraArte(char *matriz[20][20]){
     for(int i=0; i<20; i++){
-        for(int j=0; j<40; j++){
+        for(int j=0; j<20; j++){
             if(i==0 || i == 19){
                 matriz[i][j] = "\U0001F7EB";
             }
-            else if(j==0 || j==39){
+            else if(j==0 || j==19){
                 matriz[i][j] = "\U0001F7EB";
             }
             else{
