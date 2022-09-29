@@ -352,7 +352,7 @@ void preencheArte(char *matriz[20][20]){
                     case 6:
                     case 7:
                         if(i>7){
-                            matriz[i][j] = "\U00002B1B";
+                            matriz[i][j] = "\U00002B1B"; 
                         }
                         else{
                             random = (rand()%2)+1;

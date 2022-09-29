@@ -27,6 +27,9 @@ int main(){
     if(quantidade <= 0){
         quantidade = (rand() % 100) + 1;
     }
+    else if(quantidade > 100){
+        quantidade = 100;
+    }
     while(true){
         printf("Digite o numero da opcao desejada: ");
         scanf("%d", &op);
